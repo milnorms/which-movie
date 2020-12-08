@@ -1,0 +1,64 @@
+<div class="body">
+<div class="heading" *ngIf='watchListArray'>
+  <h1>My movie watchlist</h1>
+  <!-- FOR TESTING PURPOSES REMOVE LATER  Button to erase all movies from database-->
+  <i class="fa fas fa-trash trash-icon" title="Remove all movies from database" (click)="onRemoveAllMovies(watchListArray)"></i>
+</div>
+
+<div class="movie-list" *ngIf='watchListArray'>
+
+  <div class="unwatched">
+    <h3>Unwatched</h3>
+    <ul>
+      <li *ngFor='let movie of unwatched'>
+
+        <div class="card">
+          <img class='poster'[src]='movie.poster' (click)='onClickGoToMovie(movie.imdbId)'>
+          <div class="container">
+            <h4 class="title" (click)='onClickGoToMovie(movie.imdbId)'><b>{{ movie.title }} ({{ movie.year }})</b></h4>
+            <i class="fa fa-eye unwatched-icon" aria-hidden="true" title="Mark as watched" (click)="onClickWatch(movie.$key, movie.watched)"></i>
+            <span class="stars">
+              <i class=" fa fas fa-star" [class.star-hover]='mouseOveredOne' (mouseover)='mouseOveredOne=true' (mouseout)='mouseOveredOne=false' [class.rated]='movie.rating >= 1' (click)='onClickSetRating(movie.$key, 1)'></i>
+              <i class=" fa fas fa-star" [class.star-hover]='mouseOveredTwo' (mouseover)='mouseOveredTwo=true && mouseOveredOne=true' (mouseout)='mouseOveredTwo=true && mouseOveredOne=false' [class.rated]='movie.rating >= 2' (click)='onClickSetRating(movie.$key, 2)'></i>
+              <i class=" fa fas fa-star" [class.star-hover]='mouseOveredThree' (mouseover)='mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=true' (mouseout)='mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=false' [class.rated]='movie.rating >= 3' (click)='onClickSetRating(movie.$key, 3)'></i>
+              <i class=" fa fas fa-star" [class.star-hover]='mouseOveredFour' (mouseover)='mouseOveredFour = true && mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=true' (mouseout)='mouseOveredFour=true && mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=false' [class.rated]='movie.rating >= 4' (click)='onClickSetRating(movie.$key, 4)'></i>
+              <i class=" fa fas fa-star" [class.star-hover]='mouseOveredFive' (mouseover)='mouseOveredFive = true && mouseOveredFour = true && mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=true' (mouseout)='mouseOveredFive=true && mouseOveredFour=true && mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=false' [class.rated]='movie.rating >= 5' (click)='onClickSetRating(movie.$key, 5)'></i>
+            </span>
+          <p>{{movie.genre}}</p>
+          </div>
+          <i class="fa fas fa-trash remove-movie" (click)="onClickRemoveMovie(movie.$key)"></i>
+      </div>
+
+      </li>
+    </ul>
+  </div>
+
+  <div class="watched">
+    <h3>Watched</h3>
+    <ul>
+      <li *ngFor='let movie of watched'>
+
+        <div class="card">
+          <img class='poster'[src]='movie.poster' (click)='onClickGoToMovie(movie.imdbId)'>
+          <div class="container">
+            <h4 class="title" (click)='onClickGoToMovie(movie.imdbId)'><b>{{ movie.title }} ({{ movie.year }})</b></h4>
+
+            <span class="stars">
+              <i class=" fa fas fa-star" [class.star-hover]='mouseOveredOne' (mouseover)='mouseOveredOne=true' (mouseout)='mouseOveredOne=false' [class.rated]='movie.rating >= 1' (click)='onClickSetRating(movie.$key, 1)'></i>
+              <i class=" fa fas fa-star" [class.star-hover]='mouseOveredTwo' (mouseover)='mouseOveredTwo=true && mouseOveredOne=true' (mouseout)='mouseOveredTwo=true && mouseOveredOne=false' [class.rated]='movie.rating >= 2' (click)='onClickSetRating(movie.$key, 2)'></i>
+              <i class=" fa fas fa-star" [class.star-hover]='mouseOveredThree' (mouseover)='mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=true' (mouseout)='mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=false' [class.rated]='movie.rating >= 3' (click)='onClickSetRating(movie.$key, 3)'></i>
+              <i class=" fa fas fa-star" [class.star-hover]='mouseOveredFour' (mouseover)='mouseOveredFour = true && mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=true' (mouseout)='mouseOveredFour=true && mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=false' [class.rated]='movie.rating >= 4' (click)='onClickSetRating(movie.$key, 4)'></i>
+              <i class=" fa fas fa-star" [class.star-hover]='mouseOveredFive' (mouseover)='mouseOveredFive = true && mouseOveredFour = true && mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=true' (mouseout)='mouseOveredFive=true && mouseOveredFour=true && mouseOveredThree = true && mouseOveredTwo=true && mouseOveredOne=false' [class.rated]='movie.rating >= 5' (click)='onClickSetRating(movie.$key, 5)'></i>
+            </span>
+          <p>{{movie.genre}}</p>
+          </div>
+          <i class="fa fas fa-trash remove-movie" (click)="onClickRemoveMovie(movie.$key)"></i>
+      </div>
+
+      </li>
+    </ul>
+  </div>
+
+</div>
+</div>
+

@@ -1,0 +1,43 @@
+<div id='result-single-container' *ngIf='currentMovie'>
+
+    <div id='result-single-ratings'>
+      <div *ngFor='let rating of currentMovie.Ratings'>
+        <h3>{{rating.Source}}</h3>
+        <p>{{rating.Value}}</p>
+      </div>
+    </div>
+
+
+  <div id='result-single-misc' >
+    <img id='poster' [src]="currentMovie.Poster">
+    <br>
+    <i class="fa fa-plus-circle add" title="Add to watchlist" (click)="onAddToWatchList(currentMovie)"></i>
+    <div [ngClass]="this.added ? 'added' : 'not-added'">{{currentMovie.Title}} added to watchlist!</div>
+
+    <h2>Cast</h2>
+    <p>{{currentMovie.Actors}}</p>
+
+    <h2>Genre</h2>
+    <p>{{currentMovie.Genre}}</p>
+
+    <h2>Awards</h2>
+    <p>{{currentMovie.Awards}}</p>
+
+  </div>
+
+  <div class="center">
+
+    <div id="result-single-title">
+      <h1>{{currentMovie.Title}} ({{currentMovie.Year}})</h1>
+      <p>Directed by {{currentMovie.Director}}</p>
+
+  </div>
+
+    <div id='result-single-desc'>
+      <h3>Description</h3>
+      <p>{{currentMovie.Plot}}</p>
+    </div>
+
+</div>
+
+</div>

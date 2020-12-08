@@ -1,0 +1,36 @@
+$primary: #AE58E3;
+$primary-dark: darken($primary, 20%);
+
+header {
+  background: $primary;
+
+.logo {
+    font-weight: bold;
+}
+
+
+  nav {
+
+      overflow: hidden;
+      justify-self: right;
+
+      ul {
+          list-style-type: none;
+          margin: 0; padding: 0;
+
+          li {
+              float: left;
+
+              a {
+                  padding: 1.5em;
+                  text-transform: uppercase;
+                  font-size: .8em;
+
+                  &:hover {
+                      background: #983dd0;
+                  }
+              }
+          }
+      }
+  }
+}

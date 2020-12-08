@@ -121,8 +121,13 @@
               "devServerTarget": "which-movie:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "which-movie"
 }

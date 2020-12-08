@@ -1,0 +1,24 @@
+
+  <div class="wrapper">
+
+  <h2>Results for: <span class="search-term">{{this.search.term}}</span></h2>
+
+
+  <div class="row" *ngIf="movies">
+      <div class="column" *ngFor="let movie of movies.Search;" (click)="onGoResultSingle(movie)">
+        <div class='movie-col'>
+          <h4>{{ movie.Title }} ({{ movie.Year }})</h4>
+          <img id="poster" [src]="movie.Poster">
+        </div>
+
+  </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+

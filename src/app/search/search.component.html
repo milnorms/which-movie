@@ -1,0 +1,15 @@
+
+<div id='search-container'>
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+
+
+    <label>
+      <input type="text" class="search" formControlName="search" placeholder="Search for a movie!">
+      <div *ngIf="submitted && searchForm.controls.search.errors" class="error">
+      </div>
+    </label>
+
+    <input type="submit" class="submit" value="Go!">
+
+  </form>
+</div>

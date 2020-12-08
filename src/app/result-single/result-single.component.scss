@@ -1,0 +1,106 @@
+$unwatced: rgb(136, 136, 136);
+$unwatced-light: lighten($unwatced, 40%);
+$primary: #AE58E3;
+$primary-dark: darken($primary, 20%);
+$secondary: #F48149;
+$secondary-dark: darken($secondary, 20%);
+$border-rad : 10px;
+
+
+#result-single-container {
+  display: flex;
+
+
+}
+
+#result-single-container  > *{
+  margin: 15px;
+  padding: 15px;
+
+
+}
+
+
+
+#result-single-container div {
+  flex: 1;
+
+}
+
+#result-single-ratings {
+  order: 3;
+}
+
+#result-single-title {
+
+  p {
+    font-size: 15px;
+  }
+
+  h1 {
+    color:$primary-dark;
+  }
+
+
+}
+
+#result-single-desc {
+  h3 {
+    color:$primary;
+  }
+}
+
+#result-single-misc {
+  background-color: $unwatced-light;
+}
+
+
+
+.center {
+  order: 2;
+}
+
+
+
+#poster {
+  border-radius: $border-rad;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-left: 10%;
+}
+
+
+
+.add {
+  color: $unwatced;
+  font-size: 2rem;
+  margin-left: 10px;
+}
+
+.add:hover {
+  color: $primary;
+  cursor: pointer;
+}
+
+.not-added {
+  display: none;
+}
+
+.added{
+  font-weight: bolder;
+  color: $primary;
+  background-color: $unwatced-light;
+
+  animation:added 0.5s 1;
+  animation-fill-mode: forwards;
+  animation-delay:1s;
+  width: 25%;
+
+
+}
+
+@keyframes added{
+  from {opacity :1;}
+  to {opacity :0;}
+}
+
+

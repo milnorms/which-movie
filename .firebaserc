@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "which-movie-7c2e3": {
+      "hosting": {
+        "which-movie": [
+          "which-movie-7c2e3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "which-movie-7c2e3"
+  }
+}

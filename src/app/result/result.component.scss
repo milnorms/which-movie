@@ -1,0 +1,49 @@
+$unwatced: rgb(136, 136, 136);
+$primary: #AE58E3;
+$primary-dark: darken($primary, 20%);
+$secondary: #F48149;
+$secondary-dark: darken($secondary, 20%);
+$border-rad : 10px;
+
+.search-term {
+ color: $unwatced;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+
+}
+
+.movie-col {
+      /* Add shadows to create the "card" effect */
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+
+      img {
+        padding: 20px;
+        border-radius: 10px;
+
+      }
+}
+
+.movie-col:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.column:hover {
+  cursor: pointer;
+  color: $primary;
+}
