@@ -6,11 +6,11 @@ header {
 
 .logo {
     font-weight: bold;
+    font-size:x-large;
 }
 
 
   nav {
-
       overflow: hidden;
       justify-self: right;
 
@@ -22,9 +22,9 @@ header {
               float: left;
 
               a {
-                  padding: 1.5em;
+                  // padding: 1.5em;
                   text-transform: uppercase;
-                  font-size: .8em;
+                  font-size: .9em;
 
                   &:hover {
                       background: #983dd0;
@@ -33,4 +33,21 @@ header {
           }
       }
   }
+  .containerLogo {
+    display: flex;
+    align-items: center;
+
+
+    .video {
+      width: 2.5vw;
+      padding-right: 10px;
+    }
+  }
+
+  .containerSearch {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+  }
+
 }

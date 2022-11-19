@@ -1,21 +1,25 @@
 $primary: #AE58E3;
 $primary-dark: darken($primary, 20%);
 $primary-light: lighten($primary, 20%);
+$border-radius: 7px;
+$margin: 10px;
 
 #search-container {
-  float: right;
   display: flex;
+
+  flex-direction: column;
+  width: 100%;
 }
 
 .submit {
   padding: 10px;
-  margin: 5px;
+  // margin: $margin;
   background-color: $primary-dark;
   text-shadow: none;
   border: none;
   font: bold 15px arial, sans-serif;
   color: rgb(240, 240, 240);
-  border-radius: 2px;
+  border-radius: $border-radius;
 
 }
 
@@ -27,8 +31,9 @@ $primary-light: lighten($primary, 20%);
 
 .search {
   padding: 5px;
-  margin: 5px;
-  height: 25px;
+  margin-right: $margin;
   width: 250px;
+  height: 25px;
   border: none;
+  border-radius: $border-radius;
 }

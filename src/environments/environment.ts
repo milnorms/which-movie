@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl : 'http://www.omdbapi.com/?s=',
+  apiUrl : 'https://www.omdbapi.com/?s=',
   apiKey : 'a94b9e03',
   firebase : {
     apiKey: "AIzaSyAZgc3wNQv9dDWfMKU8yDj2MME8ZhlljxM",

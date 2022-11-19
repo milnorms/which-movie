@@ -10,6 +10,8 @@ $border-rad : 10px;
 div.heading  {
   h1 {
     text-align: center;
+    color: $primary-dark;
+    font-weight: bolder;
   }
 
   .trash-icon {
@@ -37,15 +39,18 @@ div.movie-list {
 div.unwatched {
   text-align: center;
   flex: 0 0 50%;
-
-
-
+  .containerBottom {
+    justify-content: space-between;
+  }
 }
 
 
 div.watched {
   text-align: center;
   flex: 1;
+  .containerBottom {
+    justify-content:flex-end;
+  }
 
 }
 
@@ -78,8 +83,15 @@ li {
   }
 }
 
+.containerBottom {
+  display: flex;
+  align-items: center;
+}
+
+
+
 .remove-movie {
-  float: right
+  font-size: $icon;
 }
 
 .remove-movie:hover {
@@ -96,6 +108,8 @@ li {
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+  display: flex;
+  flex-direction: column;
 
   h4 {
     color: $primary-dark;

@@ -93,8 +93,6 @@ export class WatchListComponent implements OnInit {
   }
 
 
-
-
 }
 
 

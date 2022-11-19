@@ -5,6 +5,7 @@ import { Movie } from './models/movie.model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class WatchService {
   watchList: AngularFireList<any>;
 
@@ -47,9 +48,5 @@ export class WatchService {
   removeMovie($key: string) {
     this.watchList.remove($key);
   }
-
-
-
-
 
 }
